@@ -14,3 +14,6 @@ body {
     flex-flow: row wrap;
     justify-content: center;
 }
+header {
+    width: 100%;
+}
