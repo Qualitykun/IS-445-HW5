@@ -17,3 +17,6 @@ body {
 header {
     width: 100%;
 }
+.head {
+    text-align: center;
+}
