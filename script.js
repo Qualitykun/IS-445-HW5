@@ -44,7 +44,7 @@ function getusername(data) {
     for (let index = 0; index < data.length; index++) {
         let object = data[index];
         let username = object.username;
-        temparray.push(username);
+        temparray2.push(username);
     }
     temparray2.sort(function(a, b) {
         return a.length-b.length;
