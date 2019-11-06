@@ -19,7 +19,7 @@ function getemail(data) {
     temparray.sort();
     let list = document.getElementById('container1');
     for (let index = 0; index < temparray.length; index++) {
-        let alphaemail=temparry[index];
+        let alphaemail=temparray[index];
         let newlistitem=document.createElement('li');
         let listvalue=document.createTextNode(alphaemail);
         newlistitem.appendChild(listvalue);
