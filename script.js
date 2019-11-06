@@ -50,8 +50,8 @@ function getusername(data) {
         return a.length-b.length;
     });
     let list = document.getElementById('container2');
-    for (let index = 0; index < temparray.length; index++) {
-        let sorteduname=temparray[index];
+    for (let index = 0; index < temparray2.length; index++) {
+        let sorteduname=temparray2[index];
         let newlistitem=document.createElement('li');
         let listvalue=document.createTextNode(sorteduname);
         newlistitem.appendChild(listvalue);
