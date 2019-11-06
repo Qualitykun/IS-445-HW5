@@ -29,5 +29,33 @@ function getemail(data) {
 xhrdata();
 
 const fetchdata = () => {
-    fetch('https://jsonplaceholder.typicode.com/users');
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => {
+        return response.json();
+    })
+    .then(responseData => {
+        console.log(responseData);
+        getusername(responseData);
+    })
 }
+
+function getusername(data) {
+    let temparray2 = [];
+    for (let index = 0; index < data.length; index++) {
+        let object = data[index];
+        let username = object.username;
+        temparray.push(username);
+    }
+    temparray2.sort(function(a, b) {
+        return a.length-b.length;
+    });
+    let list = document.getElementById('container2');
+    for (let index = 0; index < temparray.length; index++) {
+        let sorteduname=temparray[index];
+        let newlistitem=document.createElement('li');
+        let listvalue=document.createTextNode(sorteduname);
+        newlistitem.appendChild(listvalue);
+        list.appendChild(newlistitem);
+    }
+}
+fetchdata();
