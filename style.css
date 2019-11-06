@@ -1,0 +1,10 @@
+.title {
+    font-size: 20pt;
+    font-weight: bold;
+    text-align: center;
+}
+.container {
+    box-sizing: border-box;
+    border: solid green;
+    text-align: left;
+}
