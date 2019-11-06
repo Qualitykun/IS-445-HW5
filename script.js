@@ -1,4 +1,4 @@
-const getdata = () =>  {  
+const xhrdata = () =>  {  
     const req = new XMLHttpRequest();
     req.open('GET', 'https://jsonplaceholder.typicode.com/users');
     req.onload = function() {
@@ -6,6 +6,7 @@ const getdata = () =>  {
         console.log(data);
         getemail(data);
     }
+    req.send();
 }
 
 function getemail(data) {
@@ -25,4 +26,8 @@ function getemail(data) {
         list.appendChild(newlistitem);
     }
 }
-getdata();
+xhrdata();
+
+const fetchdata = () => {
+    fetch('https://jsonplaceholder.typicode.com/users');
+}
